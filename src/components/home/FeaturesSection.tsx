@@ -45,13 +45,13 @@ const FEATURES = [
   },
 ]
 
-const COLOR_MAP = {
-  blue:   { bg: 'bg-blue-500/10',   border: 'border-blue-500/20',   icon: 'text-blue-400',   glow: 'group-hover:shadow-blue-500/10' },
-  purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/20', icon: 'text-purple-400', glow: 'group-hover:shadow-purple-500/10' },
-  emerald:{ bg: 'bg-emerald-500/10',border: 'border-emerald-500/20',icon: 'text-emerald-400',glow: 'group-hover:shadow-emerald-500/10' },
-  orange: { bg: 'bg-orange-500/10', border: 'border-orange-500/20', icon: 'text-orange-400', glow: 'group-hover:shadow-orange-500/10' },
-  pink:   { bg: 'bg-pink-500/10',   border: 'border-pink-500/20',   icon: 'text-pink-400',   glow: 'group-hover:shadow-pink-500/10' },
-  cyan:   { bg: 'bg-cyan-500/10',   border: 'border-cyan-500/20',   icon: 'text-cyan-400',   glow: 'group-hover:shadow-cyan-500/10' },
+const COLOR_MAP: Record<string, { bg: string; border: string; iconColor: string }> = {
+  blue:    { bg: 'rgba(245,240,232,0.06)', border: 'rgba(245,240,232,0.1)',  iconColor: '#f5f0e8' },
+  purple:  { bg: 'rgba(201,169,110,0.08)', border: 'rgba(201,169,110,0.15)', iconColor: '#c9a96e' },
+  emerald: { bg: 'rgba(52,211,153,0.08)',  border: 'rgba(52,211,153,0.15)',  iconColor: '#34d399' },
+  orange:  { bg: 'rgba(201,169,110,0.08)', border: 'rgba(201,169,110,0.15)', iconColor: '#c9a96e' },
+  pink:    { bg: 'rgba(245,240,232,0.06)', border: 'rgba(245,240,232,0.1)',  iconColor: '#d4c5a9' },
+  cyan:    { bg: 'rgba(245,240,232,0.06)', border: 'rgba(245,240,232,0.1)',  iconColor: '#e8e0d0' },
 }
 
 export default function FeaturesSection() {
@@ -76,10 +76,10 @@ export default function FeaturesSection() {
             return (
               <div
                 key={feature.title}
-                className={`card card-hover group cursor-default hover:shadow-xl ${colors.glow}`}
+                className="card card-hover group cursor-default hover:shadow-xl"
               >
-                <div className={`w-12 h-12 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center mb-5`}>
-                  <Icon size={22} className={colors.icon} />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style={{background: colors.bg, border: `1px solid ${colors.border}`}}>
+                  <Icon size={22} style={{color: colors.iconColor}} />
                 </div>
                 <h3 className="font-semibold text-lg text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{feature.description}</p>

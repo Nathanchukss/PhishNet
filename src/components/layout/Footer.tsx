@@ -3,15 +3,15 @@ import { Github, Mail, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950">
+    <footer className="border-t border-white/8" style={{background: '#09090e'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
               <img src="/logo.svg" alt="PhishNet" className="w-8 h-8 rounded-lg" />
-              <span className="font-bold text-lg text-white">
-                Phish<span className="text-blue-400">Net</span>
+              <span className="font-bold text-lg" style={{color:'#f5f0e8'}}>
+                Phish<span style={{color:'#c9a96e'}}>Net</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
@@ -72,12 +72,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-600">
+        <div className="mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4" style={{borderTop:'1px solid #2a2a38'}}>
+          <p className="text-xs" style={{color:'#4a4a5a'}}>
             © 2026 PhishNet. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <p className="text-xs text-slate-600">For authorized security awareness training only.</p>
+            <p className="text-xs" style={{color:'#4a4a5a'}}>For authorized security awareness training only.</p>
             <a
               href="https://github.com/chukwudinwaokocha"
               target="_blank"

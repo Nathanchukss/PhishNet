@@ -64,34 +64,38 @@ export default function Home() {
       {/* CTA section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 p-6 sm:p-12 text-center shadow-2xl shadow-blue-900/50">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]" />
+          <div className="relative overflow-hidden rounded-3xl p-6 sm:p-12 text-center shadow-2xl shadow-black/60" style={{background:'linear-gradient(135deg, #1c1c24 0%, #141419 50%, #1a1a10 100%)'}}>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:32px_32px]" />
+            {/* Warm glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 rounded-full blur-3xl pointer-events-none" style={{background:'radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%)'}} />
             <div className="relative">
               <img src="/logo.svg" alt="PhishNet" className="w-14 h-14 mx-auto mb-6 rounded-2xl shadow-xl" />
               <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
                 Ready to protect your organization?
               </h2>
-              <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">
+              <p className="mb-8 text-lg max-w-xl mx-auto" style={{color:'#8a8a9a'}}>
                 Start your first phishing simulation in minutes. No credit card required.
               </p>
               <div className="flex flex-col xs:flex-row items-stretch xs:items-center justify-center gap-3 sm:gap-4">
                 <Link
                   to="/campaigns/new"
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-base hover:bg-blue-50 transition-colors shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-bold text-base transition-colors shadow-lg hover:opacity-90"
+                  style={{background:'#f5f0e8', color:'#0d0d12'}}
                 >
                   Start Free Campaign <ArrowRight size={18} />
                 </Link>
                 <Link
                   to="/about"
-                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-white/10 text-white font-semibold text-base hover:bg-white/20 transition-colors border border-white/20"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-base transition-colors"
+                  style={{background:'rgba(255,255,255,0.06)', color:'#c8c8d0', border:'1px solid rgba(255,255,255,0.12)'}}
                 >
                   Learn More
                 </Link>
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-blue-100">
+              <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm" style={{color:'#6a6a7a'}}>
                 {['No credit card', 'Unlimited campaigns', 'Full analytics'].map((t) => (
                   <span key={t} className="flex items-center gap-1.5">
-                    <CheckCircle size={14} /> {t}
+                    <CheckCircle size={14} style={{color:'#c9a96e'}} /> {t}
                   </span>
                 ))}
               </div>

@@ -3,13 +3,13 @@ import { TrendingUp, Users, ShieldCheck, AlertTriangle } from 'lucide-react'
 const STATS = [
   { icon: AlertTriangle, value: '91%', label: 'of cyberattacks start with phishing', color: 'text-red-400' },
   { icon: Users, value: '3.4B', label: 'phishing emails sent every day', color: 'text-orange-400' },
-  { icon: TrendingUp, value: '72%', label: 'reduction in click rate after training', color: 'text-blue-400' },
+  { icon: TrendingUp, value: '72%', label: 'reduction in click rate after training', color: 'text-emerald-400' },
   { icon: ShieldCheck, value: '5×', label: 'more likely to report after awareness training', color: 'text-emerald-400' },
 ]
 
 export default function StatsSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 border-y border-slate-800 bg-slate-900/30">
+    <section className="py-20 px-4 sm:px-6 lg:px-8" style={{borderTop:'1px solid #2a2a38', borderBottom:'1px solid #2a2a38', background:'rgba(26,26,34,0.3)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="section-tag">By the numbers</span>

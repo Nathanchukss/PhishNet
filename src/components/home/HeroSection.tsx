@@ -5,15 +5,15 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:64px_64px] opacity-30" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#2a2a38_1px,transparent_1px),linear-gradient(to_bottom,#2a2a38_1px,transparent_1px)] bg-[size:64px_64px] opacity-20" />
 
-      {/* Glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Glow blobs — warm neutral */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{background: 'radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%)'}} />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl pointer-events-none" style={{background: 'radial-gradient(circle, rgba(245,240,232,0.05) 0%, transparent 70%)'}} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8 animate-fade-up">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-up" style={{background:'rgba(255,255,255,0.07)', border:'1px solid rgba(255,255,255,0.12)', color:'#c8c8d0'}}>
           <ShieldCheck size={14} />
           Security Awareness Training Platform
         </div>
@@ -37,24 +37,24 @@ export default function HeroSection() {
             <ArrowRight size={18} />
           </Link>
           <Link to="/about" className="btn-secondary text-base px-8 py-4">
-            <Play size={16} className="text-blue-400" />
+            <Play size={16} style={{color:'#c9a96e'}} />
             See How It Works
           </Link>
         </div>
 
         {/* Floating email mockup */}
         <div className="relative mt-20 animate-fade-up animate-delay-400">
-          <div className="max-w-2xl mx-auto glass rounded-2xl p-1 shadow-2xl shadow-slate-950">
-            <div className="bg-slate-900 rounded-xl overflow-hidden">
+          <div className="max-w-2xl mx-auto glass rounded-2xl p-1 shadow-2xl shadow-black/70">
+            <div className="rounded-xl overflow-hidden" style={{background:'#141419'}}>
               {/* Email header bar */}
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-800 bg-slate-800/40">
+              <div className="flex items-center gap-2 px-4 py-3 border-b" style={{borderColor:'#2a2a38', background:'rgba(26,26,34,0.6)'}}>
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500/70" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
                   <div className="w-3 h-3 rounded-full bg-green-500/70" />
                 </div>
-                <div className="flex-1 mx-4 h-6 rounded-md bg-slate-700/60 flex items-center px-3">
-                  <span className="text-xs text-slate-500">Inbox — Outlook</span>
+                <div className="flex-1 mx-4 h-6 rounded-md flex items-center px-3" style={{background:'rgba(42,42,56,0.6)'}}>
+                  <span className="text-xs" style={{color:'#4a4a5a'}}>Inbox — Outlook</span>
                 </div>
               </div>
 
@@ -106,8 +106,8 @@ export default function HeroSection() {
           </div>
 
           <div className="absolute -right-4 bottom-8 glass rounded-xl px-4 py-3 hidden lg:flex items-center gap-2.5 shadow-lg">
-            <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
-              <AlertTriangle size={16} className="text-blue-400" />
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{background:'rgba(201,169,110,0.15)'}}>
+              <AlertTriangle size={16} style={{color:'#c9a96e'}} />
             </div>
             <div>
               <p className="text-xs font-semibold text-slate-200">3 Red Flags Found</p>

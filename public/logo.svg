@@ -1,54 +1,76 @@
-<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Blue rounded background -->
-  <rect width="64" height="64" rx="14" fill="#2563EB"/>
-  <rect width="64" height="64" rx="14" fill="url(#grad)"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3B82F6"/>
-      <stop offset="100%" stop-color="#1D4ED8"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c1c24"/>
+      <stop offset="100%" stop-color="#09090e"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="44" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1520" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#060c14"/>
     </linearGradient>
   </defs>
 
-  <!-- Dock / platform the fisherman sits on -->
-  <rect x="8" y="42" width="28" height="3" rx="1.5" fill="white" opacity="0.4"/>
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)"/>
+  <rect width="64" height="64" rx="14" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
 
-  <!-- Fisherman body (sitting silhouette) -->
+  <!-- Stars -->
+  <circle cx="7"  cy="7"  r="0.7" fill="#f5f0e8" opacity="0.5"/>
+  <circle cx="44" cy="5"  r="0.5" fill="#f5f0e8" opacity="0.35"/>
+  <circle cx="55" cy="11" r="0.5" fill="#f5f0e8" opacity="0.3"/>
+  <circle cx="4"  cy="18" r="0.5" fill="#f5f0e8" opacity="0.25"/>
+  <circle cx="53" cy="21" r="0.6" fill="#f5f0e8" opacity="0.2"/>
+  <circle cx="13" cy="13" r="0.4" fill="#f5f0e8" opacity="0.35"/>
+  <circle cx="36" cy="9"  r="0.4" fill="#f5f0e8" opacity="0.2"/>
+
+  <!-- Water -->
+  <path d="M0 46 Q10 44 20 46 Q30 48 40 46 Q50 44 64 46 L64 64 L0 64 Z" fill="url(#waterGrad)"/>
+  <path d="M0 47.5 Q12 46 24 47.5 Q36 49 48 47.5 Q56 46.5 64 47.5" stroke="#e8e0d0" stroke-width="0.5" fill="none" opacity="0.18"/>
+  <path d="M0 51 Q14 49.5 28 51 Q42 52.5 56 51 L64 51" stroke="#e8e0d0" stroke-width="0.35" fill="none" opacity="0.1"/>
+
+  <!-- Dock -->
+  <rect x="7" y="40" width="27" height="5" rx="2.5" fill="#c9a96e" opacity="0.65"/>
+  <line x1="14" y1="40" x2="14" y2="45" stroke="#9a7a48" stroke-width="0.5" opacity="0.4"/>
+  <line x1="21" y1="40" x2="21" y2="45" stroke="#9a7a48" stroke-width="0.5" opacity="0.4"/>
+  <line x1="28" y1="40" x2="28" y2="45" stroke="#9a7a48" stroke-width="0.5" opacity="0.4"/>
+  <rect x="8.5"  y="45" width="3" height="8" rx="1.5" fill="#9a7a48" opacity="0.8"/>
+  <rect x="30.5" y="45" width="3" height="8" rx="1.5" fill="#9a7a48" opacity="0.8"/>
+
+  <!-- Legs -->
+  <rect x="16" y="43" width="3.5" height="9" rx="1.75" fill="#d4c5a9"/>
+  <rect x="22" y="43" width="3.5" height="9" rx="1.75" fill="#d4c5a9"/>
+  <ellipse cx="17.75" cy="53" rx="3"   ry="1.8" fill="#b8a888"/>
+  <ellipse cx="23.75" cy="53" rx="3"   ry="1.8" fill="#b8a888"/>
+
+  <!-- Body -->
+  <path d="M13 40 C13 34 15 32 21 32 C27 32 29 34 29 40 Z" fill="#d4c5a9"/>
+
+  <!-- Arm -->
+  <line x1="27" y1="36" x2="33" y2="31" stroke="#d4c5a9" stroke-width="3" stroke-linecap="round"/>
+
   <!-- Head -->
-  <circle cx="22" cy="20" r="5.5" fill="white"/>
+  <circle cx="21" cy="28" r="5" fill="#f5f0e8"/>
 
-  <!-- Hat brim -->
-  <rect x="16" y="14" width="12" height="2.5" rx="1.2" fill="white"/>
-  <!-- Hat top -->
-  <rect x="18" y="9" width="8" height="6" rx="2" fill="white"/>
+  <!-- Hat -->
+  <ellipse cx="21" cy="24.5" rx="7.5" ry="2"   fill="#e8e0d0"/>
+  <rect    x="18"  y="17"    width="6"  height="7.5" rx="2" fill="#e8e0d0"/>
+  <rect x="18" y="22" width="6" height="1.5" rx="0.5" fill="#c9a96e" opacity="0.85"/>
 
-  <!-- Torso -->
-  <path d="M18 26 Q22 24 26 26 L27 38 L17 38 Z" fill="white"/>
-
-  <!-- Seated legs (bent at knee, feet dangling) -->
-  <path d="M17 38 Q14 42 12 46" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M27 38 Q28 42 26 46" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- Feet -->
-  <path d="M10 46 Q12 47 14 46" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <path d="M24 46 Q26 47 28 46" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-
-  <!-- Arm holding rod -->
-  <path d="M26 30 L32 27" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-
-  <!-- Fishing rod -->
-  <path d="M32 27 L56 8" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-  <!-- Rod tip glow -->
-  <circle cx="56" cy="8" r="1.5" fill="white" opacity="0.8"/>
+  <!-- Rod -->
+  <line x1="33" y1="31" x2="57" y2="6" stroke="#f5f0e8" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="42" cy="22" r="1.2" stroke="#c9a96e" stroke-width="0.9" fill="none"/>
+  <circle cx="51" cy="13" r="1"   stroke="#c9a96e" stroke-width="0.9" fill="none"/>
+  <circle cx="57" cy="6"  r="1.8" fill="#c9a96e"/>
+  <circle cx="57" cy="6"  r="3.5" fill="#c9a96e" opacity="0.18"/>
 
   <!-- Fishing line -->
-  <path d="M56 8 C58 20 58 38 55 52" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M57 6 C60 16 58 30 56 42 C55.5 44 55 46 54 50" stroke="#e8e0d0" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.7"/>
 
   <!-- Hook -->
-  <path d="M55 52 C55 57 51 59 50 55" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-  <!-- Hook barb -->
-  <path d="M53 57 L51 55" stroke="white" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <path d="M54 50 C54 55 50 59 46 57 C42 55 43 50 47 50" stroke="#c9a96e" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="47" y1="50" x2="50.5" y2="53.5" stroke="#c9a96e" stroke-width="1.8" stroke-linecap="round"/>
 
-  <!-- Water ripples below hook -->
-  <path d="M46 56 Q49 54 52 56 Q55 58 58 56" stroke="white" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.35"/>
-  <path d="M44 59 Q48 57 52 59 Q56 61 60 59" stroke="white" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.2"/>
+  <!-- Ripples -->
+  <ellipse cx="53" cy="51" rx="5"   ry="1.5" stroke="#e8e0d0" stroke-width="0.7" fill="none" opacity="0.25"/>
+  <ellipse cx="53" cy="51" rx="8.5" ry="2.5" stroke="#e8e0d0" stroke-width="0.5" fill="none" opacity="0.12"/>
 </svg>
