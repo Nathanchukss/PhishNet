@@ -1,0 +1,54 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue rounded background -->
+  <rect width="64" height="64" rx="14" fill="#2563EB"/>
+  <rect width="64" height="64" rx="14" fill="url(#grad)"/>
+
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dock / platform the fisherman sits on -->
+  <rect x="8" y="42" width="28" height="3" rx="1.5" fill="white" opacity="0.4"/>
+
+  <!-- Fisherman body (sitting silhouette) -->
+  <!-- Head -->
+  <circle cx="22" cy="20" r="5.5" fill="white"/>
+
+  <!-- Hat brim -->
+  <rect x="16" y="14" width="12" height="2.5" rx="1.2" fill="white"/>
+  <!-- Hat top -->
+  <rect x="18" y="9" width="8" height="6" rx="2" fill="white"/>
+
+  <!-- Torso -->
+  <path d="M18 26 Q22 24 26 26 L27 38 L17 38 Z" fill="white"/>
+
+  <!-- Seated legs (bent at knee, feet dangling) -->
+  <path d="M17 38 Q14 42 12 46" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M27 38 Q28 42 26 46" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Feet -->
+  <path d="M10 46 Q12 47 14 46" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M24 46 Q26 47 28 46" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Arm holding rod -->
+  <path d="M26 30 L32 27" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Fishing rod -->
+  <path d="M32 27 L56 8" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Rod tip glow -->
+  <circle cx="56" cy="8" r="1.5" fill="white" opacity="0.8"/>
+
+  <!-- Fishing line -->
+  <path d="M56 8 C58 20 58 38 55 52" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Hook -->
+  <path d="M55 52 C55 57 51 59 50 55" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <!-- Hook barb -->
+  <path d="M53 57 L51 55" stroke="white" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+  <!-- Water ripples below hook -->
+  <path d="M46 56 Q49 54 52 56 Q55 58 58 56" stroke="white" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <path d="M44 59 Q48 57 52 59 Q56 61 60 59" stroke="white" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.2"/>
+</svg>
