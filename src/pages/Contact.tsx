@@ -129,10 +129,10 @@ export default function Contact() {
               <div className="card space-y-5">
                 <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Other ways to reach us</h3>
                 {[
-                  { icon: Mail,         label: 'Email',    value: 'hello@phishnet.io',                    sub: 'Reply within 24 hours' },
-                  { icon: MessageSquare,label: 'Live Chat', value: 'Available in dashboard',              sub: 'Mon–Fri, 9am–6pm EST' },
-                  { icon: Github,       label: 'GitHub',   value: 'github.com/Nathanchukss/PhishNet',    sub: 'Open source contributions welcome' },
-                  { icon: Linkedin,     label: 'LinkedIn', value: 'Connect with us',                      sub: 'Updates and security news' },
+                  { icon: Mail,         label: 'Email',    value: 'chukwudinwaokocha@gmail.com',          sub: 'Reply within 24 hours',                href: 'mailto:chukwudinwaokocha@gmail.com' },
+                  { icon: MessageSquare,label: 'Live Chat', value: 'Available in dashboard',             sub: 'Mon–Fri, 9am–6pm EST',                  href: null },
+                  { icon: Github,       label: 'GitHub',   value: 'github.com/Nathanchukss/PhishNet',   sub: 'Open source contributions welcome',      href: 'https://github.com/Nathanchukss/PhishNet' },
+                  { icon: Linkedin,     label: 'LinkedIn', value: 'linkedin.com/in/nathan-nwaokocha',   sub: 'Connect with me',                        href: 'https://www.linkedin.com/in/nathan-nwaokocha/' },
                 ].map((item) => {
                   const Icon = item.icon
                   return (
@@ -142,7 +142,13 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 uppercase tracking-wide font-medium">{item.label}</p>
-                        <p className="text-sm text-slate-200 font-medium mt-0.5">{item.value}</p>
+                        {item.href ? (
+                          <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-200 font-medium mt-0.5 hover:text-blue-400 transition-colors break-all">
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="text-sm text-slate-200 font-medium mt-0.5">{item.value}</p>
+                        )}
                         <p className="text-xs text-slate-500 mt-0.5">{item.sub}</p>
                       </div>
                     </div>

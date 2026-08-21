@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Shield, Github, Twitter, Linkedin } from 'lucide-react'
+import { Github, Mail, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -9,24 +9,22 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <Shield size={18} className="text-white" />
-              </div>
+              <img src="/logo.svg" alt="PhishNet" className="w-8 h-8 rounded-lg" />
               <span className="font-bold text-lg text-white">
-                Phish<span className="text-blue-400">Guard</span>
+                Phish<span className="text-blue-400">Net</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Empowering organizations to build a human firewall through realistic phishing simulations and security awareness training.
             </p>
             <div className="flex items-center gap-3 mt-5">
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
+              <a href="https://github.com/Nathanchukss/PhishNet" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
                 <Github size={16} />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
-                <Twitter size={16} />
+              <a href="mailto:chukwudinwaokocha@gmail.com" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
+                <Mail size={16} />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
+              <a href="https://www.linkedin.com/in/nathan-nwaokocha/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
                 <Linkedin size={16} />
               </a>
             </div>
