@@ -126,31 +126,47 @@ export default function Contact() {
 
             {/* Left — contact info */}
             <div className="lg:col-span-2 space-y-5">
-              <div className="card space-y-5">
-                <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Other ways to reach us</h3>
+              <div className="space-y-3">
+                <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider px-1">Other ways to reach us</h3>
                 {[
-                  { icon: Mail,         label: 'Email',    value: 'chukwudinwaokocha@gmail.com',          sub: 'Reply within 24 hours',                href: 'mailto:chukwudinwaokocha@gmail.com' },
-                  { icon: MessageSquare,label: 'Live Chat', value: 'Available in dashboard',             sub: 'Mon–Fri, 9am–6pm EST',                  href: null },
-                  { icon: Github,       label: 'GitHub',   value: 'github.com/Nathanchukss/PhishNet',   sub: 'Open source contributions welcome',      href: 'https://github.com/Nathanchukss/PhishNet' },
-                  { icon: Linkedin,     label: 'LinkedIn', value: 'linkedin.com/in/nathan-nwaokocha',   sub: 'Connect with me',                        href: 'https://www.linkedin.com/in/nathan-nwaokocha/' },
+                  { icon: Mail,         label: 'Email',    value: 'chukwudinwaokocha@gmail.com',        sub: 'Reply within 24 hours',             href: 'mailto:chukwudinwaokocha@gmail.com' },
+                  { icon: Github,       label: 'GitHub',   value: 'github.com/Nathanchukss/PhishNet',  sub: 'Open source contributions welcome',  href: 'https://github.com/Nathanchukss/PhishNet' },
+                  { icon: Linkedin,     label: 'LinkedIn', value: 'linkedin.com/in/nathan-nwaokocha',  sub: 'Connect with me',                    href: 'https://www.linkedin.com/in/nathan-nwaokocha/' },
+                  { icon: MessageSquare,label: 'Live Chat', value: 'Available in dashboard',           sub: 'Mon–Fri, 9am–6pm EST',              href: null },
                 ].map((item) => {
                   const Icon = item.icon
-                  return (
-                    <div key={item.label} className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                        <Icon size={16} className="text-blue-400" />
+                  const inner = (
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <Icon size={18} className="text-blue-400" />
                       </div>
-                      <div>
-                        <p className="text-xs text-slate-500 uppercase tracking-wide font-medium">{item.label}</p>
-                        {item.href ? (
-                          <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-200 font-medium mt-0.5 hover:text-blue-400 transition-colors break-all">
-                            {item.value}
-                          </a>
-                        ) : (
-                          <p className="text-sm text-slate-200 font-medium mt-0.5">{item.value}</p>
-                        )}
+                      <div className="min-w-0">
+                        <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">{item.label}</p>
+                        <p className="text-sm text-slate-100 font-medium mt-0.5 truncate">{item.value}</p>
                         <p className="text-xs text-slate-500 mt-0.5">{item.sub}</p>
                       </div>
+                      {item.href && (
+                        <div className="ml-auto flex-shrink-0">
+                          <div className="w-7 h-7 rounded-lg bg-slate-700 flex items-center justify-center">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H5M9.5 2.5V7" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                  return item.href ? (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block card hover:border-blue-500/40 hover:bg-slate-800/60 transition-all duration-200 group"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div key={item.label} className="card opacity-60 cursor-default">
+                      {inner}
                     </div>
                   )
                 })}

@@ -17,16 +17,23 @@ export default function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
               Empowering organizations to build a human firewall through realistic phishing simulations and security awareness training.
             </p>
-            <div className="flex items-center gap-3 mt-5">
-              <a href="https://github.com/Nathanchukss/PhishNet" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
-                <Github size={16} />
-              </a>
-              <a href="mailto:chukwudinwaokocha@gmail.com" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
-                <Mail size={16} />
-              </a>
-              <a href="https://www.linkedin.com/in/nathan-nwaokocha/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-100 transition-colors">
-                <Linkedin size={16} />
-              </a>
+            <div className="flex items-center gap-2.5 mt-5">
+              {[
+                { href: 'https://github.com/Nathanchukss/PhishNet', icon: Github,   label: 'GitHub',   external: true  },
+                { href: 'mailto:chukwudinwaokocha@gmail.com',        icon: Mail,     label: 'Email',    external: false },
+                { href: 'https://www.linkedin.com/in/nathan-nwaokocha/', icon: Linkedin, label: 'LinkedIn', external: true },
+              ].map(({ href, icon: Icon, label, external }) => (
+                <a
+                  key={label}
+                  href={href}
+                  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  aria-label={label}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-700 bg-slate-800/60 hover:border-blue-500/50 hover:bg-blue-500/10 hover:text-blue-400 text-slate-400 transition-all duration-200 text-xs font-medium"
+                >
+                  <Icon size={14} />
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
 
